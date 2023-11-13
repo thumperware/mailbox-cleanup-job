@@ -8,11 +8,11 @@ on:
 jobs:
   deploy:
     name: Deploy Mailbox cleanup job
-    uses: thumperq/cicd/.github/workflows/cdCronJob.yaml@v0.1.5
+    uses: thumperq/cicd/.github/workflows/cdCronJob.yaml@v0.1.6
     secrets:
       PROJECT_ID: ${{ vars.PROJECT_ID }}
       GCP_SA: ${{ vars.GCP_SA }}
-      SCHEDULE: '0 * * * *'
+      SCHEDULE: 0 * * * *
       DOCKER_REGISTRY_URL: ${{ vars.DOCKER_REGISTRY_URL }}
       # it's in terraform project or github variables/secrets in the json file
       GCP_CREDENTIALS: ${{ vars.GCP_CREDENTIALS }}
