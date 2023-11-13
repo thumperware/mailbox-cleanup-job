@@ -1,0 +1,13 @@
+name: Mailbox cleanup job CI
+
+on:
+  pull_request:
+
+jobs:
+  build-test:
+    name: Build and Unit Test mailbox cleanup job
+    uses: thumperq/cicd/.github/workflows/ci.yaml@v0.1.4
+    secrets:
+      GITHUBACTION_TOKEN: ${{ secrets.GITHUBACTION_TOKEN }}
+      GITHUBACTION_USERNAME: ${{ secrets.GITHUBACTION_USERNAME }}
+      DOMAIN_NAME: ${{ secrets.DOMAIN_NAME }}
