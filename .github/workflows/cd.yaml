@@ -12,7 +12,7 @@ jobs:
     secrets:
       PROJECT_ID: ${{ vars.PROJECT_ID }}
       GCP_SA: ${{ vars.GCP_SA }}
-      SCHEDULE: 0 * * * *
+      SCHEDULE: 0 0 0 1 1 ? 2019/2
       DOCKER_REGISTRY_URL: ${{ vars.DOCKER_REGISTRY_URL }}
       # it's in terraform project or github variables/secrets in the json file
       GCP_CREDENTIALS: ${{ vars.GCP_CREDENTIALS }}
